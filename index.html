@@ -759,18 +759,9 @@
   function drawFooterLinks(rightEdge, centerY, color, dotColor) {
     ctx.textAlign = 'right';
     ctx.textBaseline = 'middle';
-    let rx = rightEdge - 8;
     ctx.font = '400 32px Geist, sans-serif';
     ctx.fillStyle = color;
-    ctx.fillText('saas.aunoo.ai', rx, centerY);
-    rx -= ctx.measureText('saas.aunoo.ai').width + 10;
-    ctx.font = '300 32px Geist, sans-serif';
-    ctx.fillStyle = dotColor || color;
-    ctx.fillText('·', rx, centerY);
-    rx -= ctx.measureText('·').width + 10;
-    ctx.font = '400 32px Geist, sans-serif';
-    ctx.fillStyle = color;
-    ctx.fillText('aunoo.ai', rx, centerY);
+    ctx.fillText('saas.aunoo.ai', rightEdge - 8, centerY);
     ctx.textAlign = 'left';
   }
 
